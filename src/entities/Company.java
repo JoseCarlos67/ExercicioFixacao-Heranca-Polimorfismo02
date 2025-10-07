@@ -28,4 +28,11 @@ public class Company extends TaxPayer{
             return getAnualIncome() * 0.16;
         }
     }
+
+    @Override
+    public String toString() {
+        return getName() +
+                ": $ " +
+                String.format("%.2f", tax());
+    }
 }

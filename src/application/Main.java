@@ -22,6 +22,8 @@ public class Main {
         List<TaxPayer> taxPayerList = new ArrayList<>();
         registerTaxPayer(taxPayerList, scanner);
 
+        showTaxesPai(taxPayerList);
+
         scanner.close();
     }
 
@@ -80,5 +82,12 @@ public class Main {
                 taxPayerList.add(new Company(name, anualIncome, numberOfEmployees));
             }
         }
+    }
+
+    private static void showTaxesPai(List<TaxPayer> taxPayerList) {
+        System.out.println("\n\nTAXES PAID:");
+
+        for (TaxPayer taxPayer : taxPayerList)
+            System.out.println(taxPayer);
     }
 }

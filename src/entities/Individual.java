@@ -28,4 +28,11 @@ public class Individual extends TaxPayer{
             return (getHealthExpenditures() * 0.15 - getHealthExpenditures() * 0.50);
         }
     }
+
+    @Override
+    public String toString() {
+        return getName() +
+                ": $ " +
+                String.format("%.2f", tax());
+    }
 }
